@@ -265,9 +265,9 @@ NSString *const XHBirthdayKey = @"XHBirthday";
 
 - (void)setOffsetY:(CGFloat)y {
     CGFloat fixAdaptorPadding = 0;
-    if ([[[UIDevice currentDevice] systemVersion] integerValue] >= 7.0) {
-        fixAdaptorPadding = 64;
-    }
+//    if ([[[UIDevice currentDevice] systemVersion] integerValue] >= 7.0) {
+//        fixAdaptorPadding = 64;
+//    }
     y += fixAdaptorPadding;
     _offsetY = y;
     CGRect frame = _showView.frame;
@@ -387,7 +387,7 @@ NSString *const XHBirthdayKey = @"XHBirthday";
     _waterDropRefresh = [[XHWaterDropRefresh alloc] initWithFrame:CGRectMake(33, CGRectGetHeight(self.bounds) - waterDropRefreshHeight, waterDropRefreshWidth, waterDropRefreshHeight)];
     _waterDropRefresh.refreshCircleImage = [UIImage imageNamed:@"circle"];
     _waterDropRefresh.offsetHeight = 20; // 线条的长度
-    [self addSubview:self.waterDropRefresh];
+//    [self addSubview:self.waterDropRefresh];
     
     CGFloat avatarButtonHeight = 66;
     self.showUserInfoViewOffsetHeight = CGRectGetHeight(self.frame) - waterDropRefreshHeight / 3 - avatarButtonHeight;
